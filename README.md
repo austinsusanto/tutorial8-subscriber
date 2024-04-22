@@ -14,3 +14,9 @@ The first guest refers to the username that will be used for the AMQP and the se
 ![Queued Messages Chart](/assets/queued-messages.png)
 
 The total number of queued message in the chart is 30 because I've run the publisher program for 6 or more times. Everytime the program has been run, 5 messages are sent. So when the program is run 6 times or more, there are about 30 messages to be queued.
+
+# RabbitMQ Queued Messages Chart with Multiple Subcribers
+
+![Queued Messages Chart](/assets/queued_messages_2.png)
+
+The spike in the queued messages chart drops significantly faster because of the amount of subscribers. Eventhough the subscribers are slow (with a delay of 10 milliseconds for every message), the big amount of queued message is proccessed together by 3 subscriber which help bring the load down just like multi-threading.
